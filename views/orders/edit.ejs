@@ -1,0 +1,62 @@
+<% layout('./layouts/boilerplate') %>
+
+<h1>Ändere deinen Deal</h1>
+<form action="/orders/<%=order._id%>?_method=PUT" method="POST">
+  <div class="mb-3">
+    <label class="form-label" for="title">Title: </label>
+    <input
+      class="form-control"
+      type="text"
+      id="title"
+      name="order[title]"
+      value="<%=order.title%>"
+    />
+  </div>
+  <div class="mb-3">
+    <label class="form-label" for="description">Description: </label>
+    <input
+      class="form-control"
+      type="text"
+      id="description"
+      name="order[description]"
+      value="<%=order.description%>"
+    />
+  </div>
+  <div class="mb-3">
+    <label class="form-label" for="price">price: </label>
+    <input
+      class="form-control"
+      type="number"
+      id="price"
+      step="0.01"
+      name="order[price]"
+      value="<%=order.price%>"
+    />
+  </div>
+  <div class="mb-3">
+    <label class="form-label" for="rating">rating: </label>
+    <input
+      class="form-control"
+      type="number"
+      min="0"
+      max="10"
+      id="rating"
+      name="order[rating]"
+      value="<%=order.rating%>"
+    />
+  </div>
+  <div class="mb-3">
+    <label class="form-label" for="customer">customer: </label>
+    <input
+      class="form-control"
+      type="text"
+      id="customer"
+      name="order[customer]"
+      value="<%=order.customer%>"
+    />
+  </div>
+  <button>Deal ändern</button>
+  <div>
+    <a href="/orders/<%=order._id%>">Zurück</a>
+  </div>
+</form>
