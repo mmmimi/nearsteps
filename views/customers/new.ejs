@@ -1,0 +1,116 @@
+<% layout('./layouts/boilerplate') %>
+
+<div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          1 Company Info
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+            <!-- Unternehmensdaten start -->
+            <div class="row">
+                <div class="col-8 offset-2">
+                  <form action="/customers" method="POST">
+                      <div class="mb-3">
+                          <label class="form-label" for="title">Firmenname </label>
+                          <input class="form-control" type="text" id="title" name="customer[title]">
+                      </div>
+                      <div class="mb-3">
+                          <label class="form-label" for="email">Mailadresse</label>
+                          <input class="form-control" type="email" id="email" name="customer[email]" required>
+                          <div class="valid-feedback">
+                              Wir geben deine Daten an niemanden weiter! Versprochen!
+                          </div>
+                      </div>
+                      <div class="mb-3">
+                          <label class="form-label" for="tel">Telefonnummer </label>
+                          <input class="form-control" type="text" id="tel" name="customer[tel]">
+                      </div>
+          
+                      <div class="mb-3">
+                          <label class="form-label" for="address1">Strasse 1 </label>
+                          <input class="form-control" type="text" id="address1" name="customer[address1]">
+                      </div>
+          
+                      <div class="mb-3">
+                          <label class="form-label" for="address2">Strasse 2 </label>
+                          <input class="form-control" type="text" id="address2" name="customer[address2]">
+                      </div>
+          
+                      <div class="row mb-3">
+                          <div class="col-3">
+                              <label class="form-label" for="plz">PLZ </label>
+                              <input class="form-control" type="text" id="plz" name="customer[plz]">
+                          </div>
+                          <div class="col-9">
+                              <label class="form-label" for="city">Ort </label>
+                              <input class="form-control" type="text" id="city" name="customer[city]">
+                          </div>
+                      </div>
+          
+                      <!-- <div class="mb-3">
+                          <label class="form-label" for="location">Firmenadresse: </label>
+                          <input class="form-control" type="text" id="location" name="customer[location]">
+                      </div> -->
+
+                      <div class="map"></div>
+                      
+                      <button class="btn btn-success">Adresse Checken</button>
+                      <div class="mt-3">
+                      <a href="/customers">Zurück</a>
+                      </div>
+                  </form>
+                </div>
+            </div>         
+            <!-- Unternehmensdaten Ende -->
+
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          2 Stripe Billing onboarding
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          3 Terms and Conditions
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                 
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingFour">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+          4 Lege gleich deinen ersten Deal an
+        </button>
+      </h2>
+      <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                 
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
