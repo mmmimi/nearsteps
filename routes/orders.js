@@ -2,9 +2,9 @@ const express = require("express");
 const router = express.Router();
 const Orders = require("../controllers/orders");
 
-router.route("/").get(Orders.index).post(Orders.createCustomer);
+router.route("/").get(Orders.index).post(Orders.createOrder);
 
 router.get("/new", Orders.renderNewForm);
-router.get("/:id", Orders.showCustomer);
+router.get("/:id", Orders.getOrder);
 
 module.exports = router;

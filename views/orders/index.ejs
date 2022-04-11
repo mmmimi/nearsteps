@@ -1,0 +1,24 @@
+<% layout('./layouts/boilerplate') %>
+
+<h1>Alle Deals</h1>
+
+<% for (let order of orders) { %>
+
+<div class="card mb-3">
+  <div class="row">
+    <div class="col-md-4">
+      <img class="img-fluid" src="<%=order.image%>" alt="" />
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title"><%= order.title %></h5>
+        <p class="card-text"><%= order.description %></p>
+        <p class="card-muted"><%= order.location %></p>
+        <a class="btn btn-primary" href="/orders/<%= order._id %>"
+          ><%= order.title %></a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+<% } %>
