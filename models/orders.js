@@ -28,7 +28,7 @@ const OrderSchema = new Schema(
     },
 
     //think of uploading to cloudinary in production
-    //AFR - for sure, we will upload in production.
+    //test push to github - live pictures will be uploaded to cloudinary
     image: {
       data: Buffer,
       contentType: String,
